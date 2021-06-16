@@ -1,0 +1,3 @@
+/Users/carlos/Documents/Drive/Drive UNSA/2 Año/III Semestre/CC2/2 Parte/github/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/carlos/Documents/Drive/Drive UNSA/2 Año/III Semestre/CC2/2 Parte/github/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/carlos/Documents/Drive/Drive UNSA/2 Año/III Semestre/CC2/2 Parte/github/cmake-build-debug/CMakeFiles/github.dir
