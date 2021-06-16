@@ -78,6 +78,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/carlos/Documents/Drive/Drive UNSA/2 Año/III Semestre/CC2/2 Parte/github/LinkedList.h">
+			<Option target="github"/>
+		</Unit>
+		<Unit filename="/Users/carlos/Documents/Drive/Drive UNSA/2 Año/III Semestre/CC2/2 Parte/github/Node.h">
+			<Option target="github"/>
+		</Unit>
 		<Unit filename="/Users/carlos/Documents/Drive/Drive UNSA/2 Año/III Semestre/CC2/2 Parte/github/main.cpp">
 			<Option target="github"/>
 		</Unit>
