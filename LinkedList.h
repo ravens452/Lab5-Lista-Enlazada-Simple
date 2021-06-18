@@ -10,6 +10,7 @@ public:
     ~LinkedList();
 
     void insert(int);
+    void insertarOrdenado(int);
     void remove(int);
     void print() const;
 };
@@ -24,6 +25,27 @@ void LinkedList::insert(int dato){
     }else{
         final->next = nuevo;
         final = final->next;}
+}
+void LinkedList::insertarOrdenado(int n) {
+
+    Node* nuevo = new Node();
+    nuevo->elem = n;
+    nuevo->next = nullptr;
+
+    if (head== nullptr || n < head->elem){
+        nuevo->next=head;
+        head=nuevo;
+    }
+    else{
+        Node *auxiliar = head;
+        while (auxiliar->next != nullptr && auxiliar->next->elem < n){
+            auxiliar = auxiliar->next;
+        }
+        if (auxiliar->next != nullptr){
+            nuevo->next = auxiliar->next;
+        }
+        auxiliar->next = nuevo;
+    }
 }
 
 void LinkedList::remove(int n) {
@@ -58,16 +80,14 @@ void LinkedList::remove(int n) {
 
 
 void LinkedList::print() const {
-    cout<<"----------llamada desde el print ---------"<<endl;
     Node *auxiliar;
     auxiliar=head;
-    cout<<"La lista completa es: "<<endl;
 
     while (auxiliar!= nullptr){
         cout<<auxiliar->elem<<"  ";
         auxiliar = auxiliar->next;
     }
-    cout<<endl;
+    cout<<"\n\n";
 }
 
 LinkedList::~LinkedList() {
