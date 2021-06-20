@@ -19,12 +19,10 @@ int main(){
         listaEnlazadaOrdenada.insertarOrdenado(arrayValores[i]);
     }
     cout<<"La lista enlazada ordenada es"<<endl;
-    listaEnlazada.print();
-
-
     listaEnlazadaOrdenada.print();
-    listaEnlazada.remove(8);
-    listaEnlazada.print();
+    listaEnlazadaOrdenada.remove(8);
+    listaEnlazadaOrdenada.print();
+    cout<<listaEnlazadaOrdenada<<endl; //sobrecarga operador de salida
 
 }
 

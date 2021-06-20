@@ -1,3 +1,4 @@
+#include <iostream>
 using namespace std;
 
 class LinkedList {
@@ -13,7 +14,20 @@ public:
     void insertarOrdenado(int);
     void remove(int);
     void print() const;
+
 };
+
+// Sobrecarga del operador << para la clase Pareja
+ostream& operator << (ostream &out,const LinkedList &obj)
+{
+    cout<<"Sobre carga del operador de salida"<<endl;
+    Node *temp = obj.head;
+    while (temp!= nullptr){
+        out<<temp->elem<<" -> ";
+        temp=temp->next;
+    }
+    return out;
+}
 
 void LinkedList::insert(int dato){
 
@@ -67,7 +81,7 @@ void LinkedList::remove(int n) {
     else if(actual->next!= nullptr){ //esta en la entrelista
         anterior->next=actual->next;
         delete actual;
-        cout<<"Se elimino corectamente el elemento"<<endl;
+        cout<<"Se elimino "<<n<<" corectamente"<<endl;
     }else if(actual->next == nullptr && actual->elem==n){
         cout<<"Eliminando el ultimo de la fila"<<endl;
         anterior->next=actual->next;
@@ -91,7 +105,6 @@ void LinkedList::print() const {
 }
 
 LinkedList::~LinkedList() {
-    cout<<"El destructor ha sido invocado"<<endl;
     Node *p= head;
     while (p){
         p=head->next;
